@@ -1,0 +1,80 @@
+.content {
+	.wrapper {
+		background-color: rgba(255,255,255,0.75);
+		padding: 2em;
+	}
+	section {
+		margin-bottom: 2em;
+	}
+	article {
+		h2 {
+			display: inline-block;
+			margin-top: 0.5em;
+		}
+	}
+}
+h3 {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+}
+p + h3 {
+	margin-top: 1.5em;
+}
+.screenshots li {
+	margin-right: 1em;
+}
+.faq li {
+	text-align: center;
+}
+.thumbnails li {
+	margin-right: 1em;
+}
+.get_involved {
+	li {
+		width: 22%;
+		padding: 1em;
+		vertical-align: top;
+		border-right: 1px solid #aaa;
+		&:first-child {padding-left: 0;}
+		&:last-child {
+			padding-right: 0;
+			border: none;
+		}
+	}
+}
+.for_the_kids {
+	background-color: rgba(175,175,175, 0.5);
+	max-width: 30em;
+	padding: 1em;
+	border-radius: 6px;
+	border: 1px dotted #aaa;
+	span {
+		display: inline-block;
+		margin-right: 2em;
+		vertical-align: top;
+		// width: 40%;
+		&:first-child {width: 50%;}
+		&:last-child {width: 35%;}
+	}
+}
+.form {
+	list-style-type: none;
+	li {
+		margin-bottom: 0.875em;
+		ul {}
+		li {margin-bottom: 0;}
+	}
+	input {
+		min-width: 10em;
+		max-width: 15em;
+	}
+	li:last-child {
+		vertical-align: top;
+	}
+}
+dl {
+	max-width: 35em;
+}
+dt {
+	font-weight: bold;
+}

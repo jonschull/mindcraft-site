@@ -1,0 +1,22 @@
+/* header styles */
+header {
+	padding-bottom: 2em;
+	.branding, nav {
+		display: inline-block;
+		// float: right;
+	}
+	nav {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
+h1 {
+	margin-bottom: 0;
+	+ span {
+		font-size: 0.875em;
+		letter-spacing: 1px;
+	}
+}
+
+@import "nav";
