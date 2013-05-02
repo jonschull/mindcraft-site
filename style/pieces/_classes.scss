@@ -1,9 +1,12 @@
 .wrapper {
+	@extend .cf;
 	position: relative;
-	width: 80%;
 	max-width: 1024px;
 	margin: 0 auto;
-	@extend .cf;
+	width: 90%;
+	@include mq(tablet) {
+		width: 80%;
+	}
 }
 .cf:before,
 .cf:after {
@@ -36,3 +39,23 @@
 }
 .right {float: right; padding-left: 2.25em;}
 .left {float: left;}
+
+// new
+.with_sidebar {
+	@extend .cf;
+	@include mq(desktop) {
+		article {
+			padding-right: 4em;
+			width: 65%;
+			float: left;
+			// reset
+			article {width: 100%; float: none;}
+		}
+		aside {
+			width: 35%;
+			float: right;
+			// reset
+			aside {width: 100%; float: none;}
+		}
+	}
+}

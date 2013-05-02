@@ -1,4 +1,164 @@
+fix background image
+	(no repeat/scroll)
+broken img link to logo
+
+
+--
+absolute links for production
+
+
+
+
+
+
+
+===================================
+
+
+
+What does a developer need to know?
+  understand the workflow (what is happening under the hood)
+    script --> program --> final thing
+  helpful to know:
+YAML (files read by the Java program
+Denizens (NPC placement)
+Java (Denizens is made of Java)
+understand that this is an open project, this is a collaborative effort
+Java
+C++
+
+Where would you send him?
+  www.citizensnpcs.com
+
+What does a content create-er need to know?
+  needs to be in the right format
+  text --> YML
+  writing questions in plain text will be very easy for those not technically-oriented
+
+
+
+
+
+possible uses:
+teachers can use what we’ve done as examples/tutorials (“this is what you can do with Mindcraft”)
+
+
+
+
+
+
+
+
 include relevant term papers from the class
+important things, where they would go
+
+1. what you worked on
+2. should it be in the site
+
+
+
+- Wilson/Abel
+	"Hills of History"
+	Mindcraft level that allows users to explore sites of ancient cultures and societies
+https://drive.google.com/a/g.rit.edu/?tab=oo#folders/0B-Jq5pFzLkQQWEI3LTRGRENFdWM
+
+- Praveen
+	“Macro-Economics Mtn.”
+	Level progressions where kids can test their economic skills
+- Alex Taker
+	Linking Minecraft and Khan Academy to find out student progress
+- Ian Kane (Brennan)
+	Tutorial mountain
+	A lot of documentation
+	(“Guides” folder)
+Denizens Compilation
+- Denizen Compilation
+First Denizens Guide
+- NPC Creation Guide
+- Brennan
+	Design doc for whole project
+	- Design Doc
+	Mission statement
+	- Our Vision
+	Scripting (Denizens (.YML))
+	- (New scripting guide coming soon!)
+- Jordan
+	Making programs to read Khan Academy nodes (knowledge map/tutorial map) to 
+render something on Minecraft.
+Making a custom Denizens mod that will look at the Khan site to determine if a user has
+completed a course
+Java
+C++
+https://drive.google.com/a/g.rit.edu/?tab=mo#folders/0B1ZXhN-v_RFHa3NHSkY3a2Z3a1k
+
+- keensly
+	https://drive.google.com/a/g.rit.edu/?tab=mo#folders/0B1ZXhN-v_RFHa3NHSkY3a2Z3a1k
+- pub
+- ian s.
+	-Formatting guide to the Terrain Generator
+	-Sentry Scriptifier (now merged with Keensley's Terrain Generator)
+	-Strong understanding of the technical aspects of the workflow (will be documented)
+
+- Alex Goldberger
+	Workflow
+	“anyone can use this. not just us
+- Chloe
+	Created content (.txt files) handed over the files to Pub whose program would create 
+.YML files
+- Jon
+	quiz creator
+
+What does a developer need to know?
+	Understand the workflow (what is happening under the hood)
+		Script --> Program --> Final thing
+	Helpful to know:
+YAML (files read by the Java program
+Denizens (NPC placement)
+Java (Denizens is made of Java)
+Understand that this is an open project, this is a collaborative effort
+Where would you send him?
+	www.citizensnpcs.com
+
+What does a content creator need to know?
+	Needs to be in the right format
+	Text files --> YML files
+	Writing questions in plain text will be very easy for those not technically-oriented with 
+Minecraft
+
+Possible uses:
+Teachers can use what we’ve done as examples/tutorials (“this is what you can do with Mindcraft”)
+
+-----
+
+Sectioning off Content Creators / Developers 
+Progressive workflow of how content which is created becomes a playable area on Mindcraft
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

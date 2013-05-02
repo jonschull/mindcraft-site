@@ -3,101 +3,205 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Resources | Mindcraft</title>
-  <meta name="description" content="Mindcraft developed by the students of Innovation and Invention in Spring 2013">
+  <title>Resources | Learning Landscape</title>
+  <meta name="description" content="Learning Landscape developed by the students of Innovation and Invention in Spring 2013">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
   <link rel="stylesheet" href="../style/style.css"/>
 </head>
 <body id="resources">
+<a href="#main" class="assistive-text">Skip to main content</a>
 <div class="container">
   <header>
      <div class="wrapper">
       <div class="branding">
-        <h1 title="Mindcraft"><a href="#"><img src="../style/images/logo.png" alt="Mindcraft" height="60" width="300"></a></h1>
+        <h1 title="Learning Landscape"><a href="#">Learning Landscape</a></h1>
         <span>Better education through interactive technology</span>
       </div>      
       <nav>
         <ul class="inline nav">
           <li><a href="../">Home</a></li>
-          <li><a href="../resources/">Resources</a></li>
+          <li class="here"><a href="../resources/">Resources</a></li>
           <li><a href="../contact/">Contact</a></li>
-          <li><a href="../about/">About Mindcraft</a></li>
+          <li><a href="../about/">About Learning Landscape</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="content">
+  <section id="main" class="content with_sidebar">
     <div class="wrapper">
+      <h2>Resources</h2>
       <article>
-        <h2>Resources</h2>
-        <p>Find out how to get Mindcraft into your class to try it out</p>
+        <p>Find out how to get Learning Landscape into your class to try it out</p>
 
         <!-- students -->
-        <h3 id="students">Students</h3>
+        <h3 id="students">Students<a href="#main">Back to top</a></h3>
+        
         <ul>
           <li>Resources for students to figure out how to play</li>
           <li><a href="#">Tutorial Mountain</a></li>
         </ul>
 
         <!-- partners -->
-        <h3 id="partners">Partners</h3>
+        <h3 id="partners">Partners<a href="#main">Back to top</a></h3>
+        <p>Learn how to submit your own courses and quizzes into the Learning Landscape world</p>
+        
+        <p>We believe it would be extremely benefcial to understand what is going on under the hood to make Learning Landscape possible</p>
+        <blockquote><em><a href="#">Click here</a> to find out how we turn your own submissions into a landscape world filled with characters loaded up with your questions</em></blockquote>
         <dl>
-          <dt>How do I submit new courses?</dt>
-          <dd>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</dd>
           <!-- dezians -->
           <dt>How does Dezians work?</dt>
-          <dd>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</dd>
-          <!-- sentries -->
-          <dt>How do I get Sentries to work?</dt>
-          <dd>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</dd>
+          <dd>
+            <ul>
+              <li><a href="DenizenHandbook.html">DenizenHandbook</a></li>
+              <li><a href="DenizensBeginnerGuide.html">DenizensBeginnerGuide</a></li>
+              <li><a href="NPCCreationGuide.html">NPCCreationGuide</a></li>
+            </ul>            
+          </dd>
+          <dt>How do I submit new courses?</dt>
+          <!-- Terrain Text file format -->
+          <dd>
+            <p>How to format a text file so it can be read by the Terrain Generator:</p>
+            <ol>
+              <li>Step 1: Find the subject you want to map on Khan Academy.</li>
+              <li>Step 2: Get the URL of that subject. It will look something like this: https://www.khanacademy.org/math/e/addition_2</li>
+              <li>Step 3: Use that URL to create the formatted node like so:</li>
+            </ol>
+            <p>The file format has 5 lines per subject.</p>
+            <!-- in-depth -->
+            <dl>
+              <!-- displayname: -->
+              <dt>DisplayName:</dt>
+              <dd>This is the title of the subject in proper English. The player sees this. If you go to the URL, this is the visible title of the page. (In this case: "2-digit addition")</dd>
+              <!-- filename -->
+              <dt>Filename:</dt>
+              <dd>This is the title of the subject in a language the computer can read better. Computers don't like spaces, they like underscores. You can find your filename at the end of the URL. (In this case: "addition_2")</dd>
+              <!-- url -->
+              <dt>URL:</dt>
+              <dd>The KhanAcademy URL in its entirety.</dd>
+              <!-- pre-reqs -->
+              <dt>PreReqs:</dt>
+              <dd> The pre-requisite subjects that the user must pass to access this subject. Each pre-requisite subject is referenced by FileName, not DisplayName. If there are no pre-reqs, write N/A instead. (In this case: "number_line", "addition_1", and "representing_numbers")</dd>
+              <!-- vPos, hPos -->
+              <dt>(vPos,hPos):</dt>
+              <dd>The actual position of the subject on the entire knowledge map. *If your subject is not Math, write (0,0) in this field.</dd>
+            </dl>
+            <blockquote>*Be certain to include all colons, spaces, quotes, and other symbols as seen in the examples below*</blockquote>
+            <p>Create a 5-line node for each subject and save it as a text file to have the Terrain Generator read it!</p>
+            <!-- examples -->
+            <h4>EXAMPLES:</h4>
+            <ul>
+              <li>
+                <code>
+                  DisplayName: "2-digit addition"<br>
+                  FileName: "addition_2"<br>
+                  URL: "https://www.khanacademy.org/math/e/addition_2"<br>
+                  PreReqs: ["number_line", "addition_1", "representing_numbers"]<br>
+                  (vPos,hPos): (4,1)
+                </code>
+              </li>
+              <li>
+                <code>
+                  DisplayName: "Representing numbers"<br>
+                  FileName: "representing_numbers"<br>
+                  URL: "https://www.khanacademy.org/math/e/representing_numbers"<br>
+                  PreReqs: [N/A]<br>
+                  (vPos,hPos): (3,0)                
+                </code>
+              </li>
+            </ul>
+          </dd>              
         </dl>
-        <ul>
-          <li>things</li>
-          <li>to</li>
-          <li>know</li>
-          <li>yes</li>
-        </ul>
 
         <!-- developers -->
-        <h3 id="developers">Developers</h3>
-        <ul>
-          <li>Can</li>
-          <li>you</li>
-          <li>fix</li>
-          <li>my</li>
-          <li>computers?</li>
-        </ul>
+        <h3 id="developers">Developers<a href="#main">Back to top</a></h3>
+        
+        <dl>
+          <dt>How do I submit new courses?</dt>
+          <dd>
+            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- dezians -->
+          <dt>How does Dezians work?</dt>
+          <dd>
+            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- sentries -->
+          <dt>How do I get Sentries to work?</dt>
+          <dd>
+            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+        </dl>
 
         <!-- teachers -->
-        <h3 id="teachers">Teachers</h3>
-        <ul>
-          <li>Hey</li>
-          <li>leave</li>
-          <li>them</li>
-          <li>kids</li>
-          <li>alone</li>
-        </ul>
+        <h3 id="teachers">Teachers<a href="#main">Back to top</a></h3>
+        
+        <dl>
+          <dt>How do I submit new courses?</dt>
+          <dd>
+            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- dezians -->
+          <dt>How does Dezians work?</dt>
+          <dd>
+            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- sentries -->
+          <dt>How do I get Sentries to work?</dt>
+          <dd>
+            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+        </dl>
 
         <!-- administrators -->
-        <h3 id="administrators">Administrators</h3>
+        <h3 id="adminisrators">Administrators<a href="#main">Back to top</a></h3>
+        
+        <dl>
+          <dt>How do I submit new courses?</dt>
+          <dd>
+            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- dezians -->
+          <dt>How does Dezians work?</dt>
+          <dd>
+            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+          <!-- sentries -->
+          <dt>How do I get Sentries to work?</dt>
+          <dd>
+            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
+            <p>Read through the whole walk-through <a href="#">here</a>.</p>
+          </dd>
+        </dl>
+      </article>
+      <!-- sidebar -->
+      <aside>
+        <h4>Table of Contents</h4>
         <ul>
-          <li>If I could get those TPS reports</li>
-          <li>by today</li>
-          <li>that'd be great</li>
+          <li><a href="#students">Students</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#developers">Developers</a></li>
+          <li><a href="#teachers">Teachers</a></li>
+          <li><a href="#administrators">Administrators</a></li>
         </ul>
-
-
-
         <ul>
           <li>[links to forums]</li>
-          <li>teaching with mindcraft <br>mini-lessons - youtube videos topics:</li>
+          <li>teaching with Learning Landscape <br>mini-lessons - youtube videos topics:</li>
           <li>HOW TO PLAY MINECRAFT</li>
           <li>basic info WITH videos</li>
           <li>MORE LINKS TO OTHER COMMUNITIES</li>
           <li>link to design doc</li>
         </ul>
-      </article>
+        <h4>Useful links</h4>
+      </aside>      
     </div>
   </section>
 

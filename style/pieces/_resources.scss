@@ -1,0 +1,22 @@
+#resources .content {
+	article {float: left; }
+	aside {float: right; }
+	dl {
+		ul {list-style-type: none; }
+		li {margin-bottom: 2em; }
+	}
+	dd {
+		margin-left: 0;
+		padding: 1em;
+		background-color: #ebebeb;
+	}
+	h3 {
+		@extend .cf;
+		border-bottom: 1px solid #222;
+		a {
+			float: right;
+			font-size: 0.5em;
+			font-style: italic;
+		}
+	}
+}

@@ -1,8 +1,46 @@
 #about .content {
-	ul {
-		max-width: 35em;
-		ul {
-			margin-left: 2em;
-		}
+	ul {max-width: 35em;
+		ul {margin-left: 2em; }
 	}
+	article img {
+		width: 100%;
+		height: 100%;
+	}	
+}
+.team {
+	list-style-type: none;
+}
+.profile {
+  @extend .cf;
+  margin-bottom: 1em;
+  img {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  hgroup {margin-bottom:0.625em;}
+  h4, h5 {margin-top: 0; }
+  h4 {margin-bottom: 0.1em; }
+  h5 {font-style: italic; margin-bottom:0; }
+  p {
+  	// Traditional scale //
+  	// --
+  	// 6  = 0.375em
+  	// 7  = 0.4375em
+  	// 8  = 0.5em
+  	// 9  = 0.5625em
+  	// 10 = 0.625em
+  	// 11 = 0.6875em
+  	// 12 = 0.75em
+  	// 14 = 0.875em
+  	// 16 = 1em
+  	// 18 = 1.125em
+  	// 21 = 1.3125em
+  	// 24 = 1.5em
+  	// 36 = 2.25em
+  	// 48 = 3em
+  	// 60 = 3.75em
+  	// 72 = 4.5em
+  	font-size: 0.875em;
+  }
 }

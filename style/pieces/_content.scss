@@ -1,7 +1,10 @@
 .content {
 	.wrapper {
-		background-color: rgba(255,255,255,0.75);
-		padding: 2em;
+		background-color: rgba(255,255,255,0.85);
+		padding: 1em;
+		@include mq(tablet) {
+			padding: 2em;
+		}
 	}
 	section {
 		margin-bottom: 2em;
@@ -10,6 +13,9 @@
 		h2 {
 			display: inline-block;
 			margin-top: 0.5em;
+		}
+		li {
+			margin-bottom: 1em;
 		}
 	}
 }
@@ -31,7 +37,7 @@ p + h3 {
 }
 .get_involved {
 	li {
-		width: 22%;
+		width: 24%;
 		padding: 1em;
 		vertical-align: top;
 		border-right: 1px solid #aaa;
@@ -50,10 +56,10 @@ p + h3 {
 	border: 1px dotted #aaa;
 	span {
 		display: inline-block;
-		margin-right: 2em;
+		// margin-right: 2em;
 		vertical-align: top;
 		// width: 40%;
-		&:first-child {width: 50%;}
+		&:first-child {width: 60%;padding-right:1em;}
 		&:last-child {width: 35%;}
 	}
 }
@@ -72,9 +78,14 @@ p + h3 {
 		vertical-align: top;
 	}
 }
+// added on Friday (apr, 26)
 dl {
 	max-width: 35em;
 }
 dt {
 	font-weight: bold;
+	margin-bottom: 1em;
+}
+dd {
+	margin-bottom: 3em;
 }

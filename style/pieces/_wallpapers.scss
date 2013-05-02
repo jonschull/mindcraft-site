@@ -1,0 +1,14 @@
+// wallpaper settings | from: CSStricks
+body {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#home {background-image: url(images/wallpaper3.jpg); }
+#resources {background-image: url(images/wallpaper4.jpg); }
+#about {background-image: url(images/wallpaper3.jpg);}
+#contact {background-image: url(images/wallpaper4.jpg); }

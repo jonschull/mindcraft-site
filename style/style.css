@@ -1,4 +1,10 @@
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
@@ -102,9 +108,7 @@ ul {
 }
 
 blockquote {
-  font-family: serif;
-  font-size: 1.5em;
-  font-style: italic;
+  padding: 1em;
   text-align: center;
 }
 
@@ -119,20 +123,28 @@ button {
 
 .wrapper {
   position: relative;
-  width: 80%;
   max-width: 1024px;
   margin: 0 auto;
+  width: 90%;
+}
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    width: 80%;
+  }
 }
 
-.cf:before, article:before, .wrapper:before,
+.cf:before, article:before, .wrapper:before, .with_sidebar:before, .profile:before, #resources .content h3:before,
 .cf:after,
 article:after,
-.wrapper:after {
+.wrapper:after,
+.with_sidebar:after,
+.profile:after,
+#resources .content h3:after {
   content: " ";
   display: table;
 }
 
-.cf:after, article:after, .wrapper:after {
+.cf:after, article:after, .wrapper:after, .with_sidebar:after, .profile:after, #resources .content h3:after {
   clear: both;
 }
 
@@ -166,6 +178,26 @@ article:after,
 
 .left {
   float: left;
+}
+
+@media only screen and (min-width: 1024px) {
+  .with_sidebar article {
+    padding-right: 4em;
+    width: 65%;
+    float: left;
+  }
+  .with_sidebar article article {
+    width: 100%;
+    float: none;
+  }
+  .with_sidebar aside {
+    width: 35%;
+    float: right;
+  }
+  .with_sidebar aside aside {
+    width: 100%;
+    float: none;
+  }
 }
 
 /* header styles */
@@ -207,7 +239,7 @@ h1 + span {
 }
 
 .here {
-  background-color: #fff;
+  background-color: #0b0;
 }
 
 footer {
@@ -246,8 +278,13 @@ footer nav li:last-child {
 }
 
 .content .wrapper {
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1em;
+}
+@media only screen and (min-width: 480px) {
+  .content .wrapper {
+    padding: 2em;
+  }
 }
 .content section {
   margin-bottom: 2em;
@@ -255,6 +292,9 @@ footer nav li:last-child {
 .content article h2 {
   display: inline-block;
   margin-top: 0.5em;
+}
+.content article li {
+  margin-bottom: 1em;
 }
 
 h3 {
@@ -279,7 +319,7 @@ p + h3 {
 }
 
 .get_involved li {
-  width: 22%;
+  width: 24%;
   padding: 1em;
   vertical-align: top;
   border-right: 1px solid #aaaaaa;
@@ -301,11 +341,11 @@ p + h3 {
 }
 .for_the_kids span {
   display: inline-block;
-  margin-right: 2em;
   vertical-align: top;
 }
 .for_the_kids span:first-child {
-  width: 50%;
+  width: 60%;
+  padding-right: 1em;
 }
 .for_the_kids span:last-child {
   width: 35%;
@@ -334,6 +374,17 @@ dl {
 
 dt {
   font-weight: bold;
+  margin-bottom: 1em;
+}
+
+dd {
+  margin-bottom: 3em;
+}
+
+#home blockquote {
+  font-family: serif;
+  font-size: 1.5em;
+  font-style: italic;
 }
 
 #about .content ul {
@@ -341,6 +392,75 @@ dt {
 }
 #about .content ul ul {
   margin-left: 2em;
+}
+#about .content article img {
+  width: 100%;
+  height: 100%;
+}
+
+.team {
+  list-style-type: none;
+}
+
+.profile {
+  margin-bottom: 1em;
+}
+.profile img {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.profile hgroup {
+  margin-bottom: 0.625em;
+}
+.profile h4, .profile h5 {
+  margin-top: 0;
+}
+.profile h4 {
+  margin-bottom: 0.1em;
+}
+.profile h5 {
+  font-style: italic;
+  margin-bottom: 0;
+}
+.profile p {
+  font-size: 0.875em;
+}
+
+#resources .content article {
+  float: left;
+}
+#resources .content aside {
+  float: right;
+}
+#resources .content dl ul {
+  list-style-type: none;
+}
+#resources .content dl li {
+  margin-bottom: 2em;
+}
+#resources .content dd {
+  margin-left: 0;
+  padding: 1em;
+  background-color: #ebebeb;
+}
+#resources .content h3 {
+  border-bottom: 1px solid #222222;
+}
+#resources .content h3 a {
+  float: right;
+  font-size: 0.5em;
+  font-style: italic;
+}
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #home {
@@ -359,25 +479,6 @@ dt {
   background-image: url(images/wallpaper4.jpg);
 }
 
-/* Traditional scale */
-/*
-6  = 0.375em
-7  = 0.4375em
-8  = 0.5em
-9  = 0.5625em
-10 = 0.625em
-11 = 0.6875em
-12 = 0.75em
-14 = 0.875em
-16 = 1em
-18 = 1.125em
-21 = 1.3125em
-24 = 1.5em
-36 = 2.25em
-48 = 3em
-60 = 3.75em
-72 = 4.5em
-*/
 #lightbox {
   position: absolute;
   left: 0;
