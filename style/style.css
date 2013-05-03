@@ -1,57 +1,2750 @@
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ * base styles
+ */
+body {
+  -webkit-font-smoothing: antialiased;
+  font: 100% "Helvetica Neue", Verdana, Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 35em;
+}
+
+ul {
+  padding-left: 0;
+}
+
+blockquote {
+  padding: 1em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+button {
+  padding: 1em;
+}
+
+dl {
+  max-width: 35em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 1em;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 90%;
+}
+@media only screen and (min-width: 480px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+.cf:before, article:before, .wrapper:before, .with_sidebar:before, #contact:before, .profile:before, #resources .content h3:before,
+.cf:after,
+article:after,
+.wrapper:after,
+.with_sidebar:after,
+#contact:after,
+.profile:after,
+#resources .content h3:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after, article:after, .wrapper:after, .with_sidebar:after, #contact:after, .profile:after, #resources .content h3:after {
+  clear: both;
+}
+
+.inline li {
+  display: inline-block;
+}
+.inline li li {
+  display: block;
+}
+
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.assistive-text:active,
+.assistive-text:focus {
+  background: #eee;
+  border-bottom: 1px solid #dddddd;
+  color: #1982d1;
+  clip: auto !important;
+  font-size: 12px;
+  position: absolute;
+  text-decoration: underline;
+  top: 0;
+  left: 7.6%;
+}
+
+.right {
+  float: right;
+  padding-left: 2.25em;
+}
+
+.left {
+  float: left;
+}
+
+.with_sidebar {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .with_sidebar article {
+    padding-right: 4em;
+    width: 65%;
+    float: left;
+  }
+  .with_sidebar article article {
+    width: 100%;
+    float: none;
+  }
+  .with_sidebar aside {
+    width: 35%;
+    float: right;
+  }
+  .with_sidebar aside aside {
+    width: 100%;
+    float: none;
+  }
+}
+
 /*
-Syntax error: File to import not found or unreadable: pieces/font-awesome.
-              Load path: /Users/sumo/Desktop/mindcraft/style
-        on line 36 of style.scss
+ *  Font Awesome 3.0.2
+ *  the iconic font designed for use with Twitter Bootstrap
+ *  -------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation
+ *  can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
+ *
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: dave@davegandy.com
+ *  Twitter: http://twitter.com/fortaweso_me
+ *  Work: Lead Product Designer @ http://kyruus.com
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("font//fontawesome-webfont.eot?v=3.0.1");
+  src: url("font//fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("font//fontawesome-webfont.woff?v=3.0.1") format("woff"), url("font//fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-31: }
-32: // base styles
-33: @import "pieces/base";
-34: @import "pieces/classes";
-35: // icons
-36: @import "pieces/font-awesome";
-37: i {
-38:   margin-right: 0.5em;
-39: }
-40: // main pieces
-41: @import "pieces/header";
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
 
-Backtrace:
-style.scss:36
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/import_node.rb:45:in `import'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:215:in `visit_import'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:299:in `block in watch'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `call'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/Users/sumo/.rvm/gems/ruby-1.9.3-p362/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: pieces/font-awesome.\A               Load path: /Users/sumo/Desktop/mindcraft/style\A         on line 36 of style.scss\A \A 31: }\A 32: // base styles\A 33: @import \"pieces/base\";\A 34: @import \"pieces/classes\";\A 35: // icons\A 36: @import \"pieces/font-awesome\";\A 37: i {\A 38:   margin-right: 0.5em;\A 39: }\A 40: // main pieces\A 41: @import \"pieces/header\";"; }
+/* more sprites.less reset */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes sure icons active on rollover in links */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"], .nav [class^="icon-"],
+.nav [class*=" icon-"] {
+  display: inline;
+  /* keeps button heights with and without icons the same */
+}
+.btn [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+.btn [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+
+.nav-tabs [class^="icon-"],
+.nav-tabs [class*=" icon-"], .nav-pills [class^="icon-"],
+.nav-pills [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+}
+.nav-tabs [class^="icon-"], .nav-tabs [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"],
+.nav-tabs [class*=" icon-"].icon-large, .nav-pills [class^="icon-"], .nav-pills [class^="icon-"].icon-large,
+.nav-pills [class*=" icon-"],
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+
+li [class^="icon-"],
+li [class*=" icon-"], .nav li [class^="icon-"],
+.nav li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+li [class^="icon-"].icon-large,
+li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
+.nav li [class*=" icon-"].icon-large {
+  /* increased font size for icon-large */
+  width: 1.5625em;
+}
+
+ul.icons {
+  list-style-type: none;
+  text-indent: -.75em;
+}
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
+  width: .75em;
+}
+
+.icon-muted {
+  color: #eeeeee;
+}
+
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: 0.2em 0.25em 0.15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.icon-2x {
+  font-size: 2em;
+}
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.icon-3x {
+  font-size: 3em;
+}
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.icon-4x {
+  font-size: 4em;
+}
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+
+.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
+
+.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
+
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
+
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@-moz-document url-prefix() {
+  .icon-spin {
+    height: .9em;
+  }
+
+  .btn .icon-spin {
+    height: auto;
+  }
+
+  .icon-spin.icon-large {
+    height: 1.25em;
+  }
+
+  .btn .icon-spin.icon-large {
+    height: .75em;
+  }
+}
+
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.icon-glass:before {
+  content: "\f000";
+}
+
+.icon-music:before {
+  content: "\f001";
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-envelope:before {
+  content: "\f003";
+}
+
+.icon-heart:before {
+  content: "\f004";
+}
+
+.icon-star:before {
+  content: "\f005";
+}
+
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+.icon-user:before {
+  content: "\f007";
+}
+
+.icon-film:before {
+  content: "\f008";
+}
+
+.icon-th-large:before {
+  content: "\f009";
+}
+
+.icon-th:before {
+  content: "\f00a";
+}
+
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+.icon-ok:before {
+  content: "\f00c";
+}
+
+.icon-remove:before {
+  content: "\f00d";
+}
+
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+.icon-off:before {
+  content: "\f011";
+}
+
+.icon-signal:before {
+  content: "\f012";
+}
+
+.icon-cog:before {
+  content: "\f013";
+}
+
+.icon-trash:before {
+  content: "\f014";
+}
+
+.icon-home:before {
+  content: "\f015";
+}
+
+.icon-file:before {
+  content: "\f016";
+}
+
+.icon-time:before {
+  content: "\f017";
+}
+
+.icon-road:before {
+  content: "\f018";
+}
+
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+.icon-download:before {
+  content: "\f01a";
+}
+
+.icon-upload:before {
+  content: "\f01b";
+}
+
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+/* \f020 doesn't work in Safari. all shifted one down */
+.icon-refresh:before {
+  content: "\f021";
+}
+
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+.icon-lock:before {
+  content: "\f023";
+}
+
+.icon-flag:before {
+  content: "\f024";
+}
+
+.icon-headphones:before {
+  content: "\f025";
+}
+
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+.icon-tag:before {
+  content: "\f02b";
+}
+
+.icon-tags:before {
+  content: "\f02c";
+}
+
+.icon-book:before {
+  content: "\f02d";
+}
+
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+.icon-print:before {
+  content: "\f02f";
+}
+
+.icon-camera:before {
+  content: "\f030";
+}
+
+.icon-font:before {
+  content: "\f031";
+}
+
+.icon-bold:before {
+  content: "\f032";
+}
+
+.icon-italic:before {
+  content: "\f033";
+}
+
+.icon-text-height:before {
+  content: "\f034";
+}
+
+.icon-text-width:before {
+  content: "\f035";
+}
+
+.icon-align-left:before {
+  content: "\f036";
+}
+
+.icon-align-center:before {
+  content: "\f037";
+}
+
+.icon-align-right:before {
+  content: "\f038";
+}
+
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+.icon-list:before {
+  content: "\f03a";
+}
+
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+.icon-picture:before {
+  content: "\f03e";
+}
+
+.icon-pencil:before {
+  content: "\f040";
+}
+
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+.icon-adjust:before {
+  content: "\f042";
+}
+
+.icon-tint:before {
+  content: "\f043";
+}
+
+.icon-edit:before {
+  content: "\f044";
+}
+
+.icon-share:before {
+  content: "\f045";
+}
+
+.icon-check:before {
+  content: "\f046";
+}
+
+.icon-move:before {
+  content: "\f047";
+}
+
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+.icon-backward:before {
+  content: "\f04a";
+}
+
+.icon-play:before {
+  content: "\f04b";
+}
+
+.icon-pause:before {
+  content: "\f04c";
+}
+
+.icon-stop:before {
+  content: "\f04d";
+}
+
+.icon-forward:before {
+  content: "\f04e";
+}
+
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+.icon-eject:before {
+  content: "\f052";
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+.icon-plus:before {
+  content: "\f067";
+}
+
+.icon-minus:before {
+  content: "\f068";
+}
+
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+.icon-gift:before {
+  content: "\f06b";
+}
+
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+.icon-fire:before {
+  content: "\f06d";
+}
+
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+.icon-plane:before {
+  content: "\f072";
+}
+
+.icon-calendar:before {
+  content: "\f073";
+}
+
+.icon-random:before {
+  content: "\f074";
+}
+
+.icon-comment:before {
+  content: "\f075";
+}
+
+.icon-magnet:before {
+  content: "\f076";
+}
+
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+.icon-retweet:before {
+  content: "\f079";
+}
+
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+.icon-key:before {
+  content: "\f084";
+}
+
+.icon-cogs:before {
+  content: "\f085";
+}
+
+.icon-comments:before {
+  content: "\f086";
+}
+
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+
+.icon-star-half:before {
+  content: "\f089";
+}
+
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+.icon-signout:before {
+  content: "\f08b";
+}
+
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+.icon-signin:before {
+  content: "\f090";
+}
+
+.icon-trophy:before {
+  content: "\f091";
+}
+
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+.icon-lemon:before {
+  content: "\f094";
+}
+
+.icon-phone:before {
+  content: "\f095";
+}
+
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+.icon-rss:before {
+  content: "\f09e";
+}
+
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+.icon-group:before {
+  content: "\f0c0";
+}
+
+.icon-link:before {
+  content: "\f0c1";
+}
+
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+.icon-save:before {
+  content: "\f0c7";
+}
+
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+.icon-table:before {
+  content: "\f0ce";
+}
+
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+.icon-money:before {
+  content: "\f0d6";
+}
+
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+.icon-columns:before {
+  content: "\f0db";
+}
+
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+.icon-envelope-alt:before {
+  content: "\f0e0";
+}
+
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
+
+.icon-exchange:before {
+  content: "\f0ec";
+}
+
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
+
+.icon-user-md:before {
+  content: "\f0f0";
+}
+
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
+
+.icon-suitcase:before {
+  content: "\f0f2";
+}
+
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
+
+.icon-coffee:before {
+  content: "\f0f4";
+}
+
+.icon-food:before {
+  content: "\f0f5";
+}
+
+.icon-file-alt:before {
+  content: "\f0f6";
+}
+
+.icon-building:before {
+  content: "\f0f7";
+}
+
+.icon-hospital:before {
+  content: "\f0f8";
+}
+
+.icon-ambulance:before {
+  content: "\f0f9";
+}
+
+.icon-medkit:before {
+  content: "\f0fa";
+}
+
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+
+.icon-beer:before {
+  content: "\f0fc";
+}
+
+.icon-h-sign:before {
+  content: "\f0fd";
+}
+
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
+
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-desktop:before {
+  content: "\f108";
+}
+
+.icon-laptop:before {
+  content: "\f109";
+}
+
+.icon-tablet:before {
+  content: "\f10a";
+}
+
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+
+.icon-circle-blank:before {
+  content: "\f10c";
+}
+
+.icon-quote-left:before {
+  content: "\f10d";
+}
+
+.icon-quote-right:before {
+  content: "\f10e";
+}
+
+.icon-spinner:before {
+  content: "\f110";
+}
+
+.icon-circle:before {
+  content: "\f111";
+}
+
+.icon-reply:before {
+  content: "\f112";
+}
+
+.icon-github-alt:before {
+  content: "\f113";
+}
+
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
+
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
+
+i {
+  margin-right: 0.5em;
+}
+
+/* header styles */
+header {
+  background-color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  header nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.branding {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .branding {
+    text-align: left;
+  }
+}
+.branding p {
+  font-size: 0.875em;
+}
+
+.nav {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+.nav li {
+  margin-bottom: 1em;
+  -webkit-transition: compact(border-bottom, 3s, ease-out, false, false, false, false, false, false);
+  -moz-transition: compact(border-bottom, 3s, ease-out, false, false, false, false, false, false);
+  -ms-transition: compact(border-bottom, 3s, ease-out, false, false, false, false, false, false);
+  -o-transition: compact(border-bottom, 3s, ease-out, false, false, false, false, false, false);
+  transition: compact(border-bottom, 3s, ease-out, false, false, false, false, false, false);
+}
+.nav li:last-child {
+  margin-right: 0;
+}
+.nav li a {
+  color: inherit;
+  padding: 0.6875em 0.6875em 0.25em;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .nav li {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .nav li {
+    margin-right: 2em;
+  }
+}
+
+.here, .nav a:hover {
+  border-bottom: 0.25em solid #333333;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.75em;
+  padding: 1em;
+  width: 100%;
+}
+
+#info {
+  background-color: #333;
+  color: #eee;
+  font-size: 0.75em;
+  padding: 0.5em 0;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+#info em {
+  padding-left: 1em;
+}
+#info em:after {
+  content: " \2192";
+}
+#info a {
+  color: #f36e21;
+  -webkit-transition: compact(color, 3s, ease-in-out, false, false, false, false, false, false);
+  -moz-transition: compact(color, 3s, ease-in-out, false, false, false, false, false, false);
+  -ms-transition: compact(color, 3s, ease-in-out, false, false, false, false, false, false);
+  -o-transition: compact(color, 3s, ease-in-out, false, false, false, false, false, false);
+  transition: compact(color, 3s, ease-in-out, false, false, false, false, false, false);
+}
+#info a:hover {
+  color: #d5560c;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1em;
+}
+@media only screen and (min-width: 480px) {
+  .content {
+    padding: 2em;
+  }
+}
+
+.buffer {
+  padding-top: 2em;
+}
+@media only screen and (min-width: 768px) {
+  .buffer {
+    padding-top: 6em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .buffer {
+    padding-top: 8em;
+  }
+}
+
+.screenshots li {
+  margin-right: 1em;
+}
+
+.faq li {
+  text-align: center;
+}
+
+.thumbnails li {
+  margin-right: 1em;
+}
+
+#get_involved li {
+  padding: 1em;
+  margin-bottom: 2em;
+  vertical-align: top;
+  border-left: 1px solid #aaaaaa;
+}
+@media only screen and (min-width: 1024px) {
+  #get_involved li {
+    width: 24%;
+  }
+  #get_involved li:first-child {
+    padding-left: 0;
+    border: none;
+  }
+}
+#get_involved li:last-child {
+  padding-right: 0;
+}
+#get_involved a {
+  font-size: 0.75em;
+}
+
+.for_the_kids {
+  background-color: rgba(175, 175, 175, 0.5);
+  max-width: 30em;
+  padding: 1em;
+  border-radius: 6px;
+  border: 1px dotted #aaaaaa;
+}
+.for_the_kids h3 {
+  margin-top: 0;
+}
+.for_the_kids div {
+  text-align: center;
+}
+.for_the_kids div p {
+  text-align: left;
+}
+.for_the_kids div:first-child {
+  margin-bottom: 2em;
+}
+
+.form {
+  list-style-type: none;
+}
+.form p {
+  margin-bottom: 0;
+}
+.form li {
+  margin-bottom: 0.875em;
+  vertical-align: top;
+}
+.form li:first-child {
+  margin-right: 3em;
+}
+.form input {
+  min-width: 20em;
+  max-width: 35em;
+  height: 2.5em;
+  border-radius: 6px;
+}
+.form textarea {
+  border-radius: 6px;
+}
+.form button {
+  border-radius: 6px;
+}
+
+#home blockquote {
+  font-family: serif;
+  font-size: 1.5em;
+  font-style: italic;
+  padding: 0;
+}
+
+#contact {
+  background-color: #2a2a2a;
+  color: #ebebeb;
+  padding: 0 0 4em;
+  margin-top: 4em;
+}
+#contact h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+#contact dl {
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  #contact article {
+    width: 35%;
+    float: left;
+  }
+  #contact aside {
+    width: 65%;
+    float: right;
+  }
+}
+
+#about {
+  padding-top: 4em;
+}
+#about article img {
+  max-width: 100%;
+}
+
+.team {
+  list-style-type: none;
+}
+
+.profile {
+  padding-right: 1em;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 480px) {
+  .profile {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .profile {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .profile {
+    width: 24%;
+  }
+}
+.profile img {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.profile hgroup {
+  margin-bottom: 0.625em;
+}
+.profile h4, .profile h5 {
+  margin-top: 0;
+}
+.profile h4 {
+  margin-bottom: 0.1em;
+  font-size: 0.875em;
+}
+.profile h5 {
+  font-style: italic;
+  margin-bottom: 0;
+}
+.profile p {
+  font-size: 0.75em;
+}
+
+#resources .content article {
+  float: left;
+}
+#resources .content aside {
+  float: right;
+}
+#resources .content dl ul {
+  list-style-type: none;
+}
+#resources .content dl li {
+  margin-bottom: 2em;
+}
+#resources .content dd {
+  margin-left: 0;
+  padding: 1em;
+  background-color: #ebebeb;
+}
+#resources .content h3 {
+  border-bottom: 1px solid #222222;
+}
+#resources .content h3 a {
+  float: right;
+  font-size: 0.5em;
+  font-style: italic;
+}
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#home {
+  background-image: url(images/wallpaper3.jpg);
+}
+
+#lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+  line-height: 0;
+}
+
+#lightbox a img {
+  border: none;
+}
+
+#outerImageContainer {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+#imageContainer {
+  padding: 10px;
+}
+
+#loading {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+#hoverNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+#imageContainer > #hoverNav {
+  left: 0;
+}
+
+#hoverNav a {
+  outline: none;
+}
+
+#prevLink, #nextLink {
+  width: 49%;
+  height: 100%;
+  background: transparent url(images/blank.gif) no-repeat;
+  /* Trick IE into showing hover */
+  display: block;
+}
+
+#prevLink {
+  left: 0;
+  float: left;
+}
+
+#nextLink {
+  right: 0;
+  float: right;
+}
+
+#prevLink:hover, #prevLink:visited:hover {
+  background: url(style/images/prev.gif) left 50% no-repeat;
+}
+
+#nextLink:hover, #nextLink:visited:hover {
+  background: url(style/images/next.gif) right 50% no-repeat;
+}
+
+/*** START : next / previous text links ***/
+#nextLinkText, #prevLinkText {
+  color: #FF9834;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#nextLinkText {
+  padding-left: 20px;
+}
+
+#prevLinkText {
+  padding-right: 20px;
+}
+
+/*** END : next / previous text links ***/
+/*** START : added padding when navbar is on top ***/
+.ontop #imageData {
+  padding-top: 5px;
+}
+
+/*** END : added padding when navbar is on top ***/
+#imageDataContainer {
+  font: 10px Verdana, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  line-height: 1.4em;
+}
+
+#imageData {
+  padding: 0 10px;
+}
+
+#imageData #imageDetails {
+  width: 70%;
+  float: left;
+  text-align: left;
+}
+
+#imageData #caption {
+  font-weight: bold;
+}
+
+#imageData #numberDisplay {
+  display: block;
+  clear: left;
+  padding-bottom: 1.0em;
+}
+
+#imageData #numberDisplay a {
+  color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#imageData #bottomNavClose {
+  width: 66px;
+  float: right;
+  padding-bottom: 0.7em;
+}
+
+#imageData #helpDisplay {
+  clear: left;
+  float: left;
+  display: block;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  height: 500px;
+  background-color: #000;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6 !important;
+  display: none;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html > body .clearfix {
+  display: inline-block;
+  width: 100%;
+}
+
+* html .clearfix {
+  /* Hides from IE-mac \*/
+  height: 1%;
+  /* End hide from IE-mac */
+}
+
+#lightboxIframe {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* punch
+*******************************************************************************/
+button.punch {
+  color: white;
+  background: #4162a8;
+  border-top: 1px solid #334d83;
+  border-right: 1px solid #334d83;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #334d83;
+  border-radius: 4px;
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  font-size: 1.125em;
+  text-align: center;
+  text-shadow: 0px -1px 1px black;
+  -webkit-background-clip: padding-box;
+}
+button.punch:hover {
+  -webkit-box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  cursor: pointer;
+}
+button.punch:active {
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  margin-top: 58px;
+}
+
+/* minimal
+*******************************************************************************/
+button.minimal {
+  background: #e3e3e3;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  -webkit-box-shadow: compact(inset 0 0 1px 1px #f6f6f6, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 1px 1px #f6f6f6, false, false, false, false, false, false, false, false);
+  color: #333;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 8px 0 9px;
+  text-align: center;
+  text-shadow: 0 1px 0 white;
+  width: 150px;
+}
+button.minimal:hover {
+  background: #d9d9d9;
+  -webkit-box-shadow: compact(inset 0 0 1px 1px #eaeaea, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 1px 1px #eaeaea, false, false, false, false, false, false, false, false);
+  color: #222;
+  cursor: pointer;
+}
+button.minimal:active {
+  background: #d0d0d0;
+  -webkit-box-shadow: compact(inset 0 0 1px 1px #e3e3e3, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 1px 1px #e3e3e3, false, false, false, false, false, false, false, false);
+  color: #000;
+}
+
+/* clean gray
+*******************************************************************************/
+button.clean-gray {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#eeeeee, #cccccc, false, false, false, false, false, false, false, false));
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #bbbbbb;
+  border-radius: 3px;
+  color: #333;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eeeeee;
+  width: 150px;
+}
+button.clean-gray:hover {
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#dddddd, #bbbbbb, false, false, false, false, false, false, false, false));
+  border: 1px solid #bbbbbb;
+  border-bottom: 1px solid #999999;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #dddddd;
+}
+button.clean-gray:active {
+  border: 1px solid #aaaaaa;
+  border-bottom: 1px solid #888888;
+  -webkit-box-shadow: compact(inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+}
+
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+button.cupid-green {
+  background-color: #7fbf4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#7fbf4d, #63a62f, false, false, false, false, false, false, false, false));
+  border: 1px solid #63a62f;
+  border-bottom: 1px solid #5b992b;
+  border-radius: 3px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #96ca6d, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #96ca6d, false, false, false, false, false, false, false, false);
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+  width: 150px;
+}
+button.cupid-green:hover {
+  background-color: #76b347;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#76b347, #5e9e2e, false, false, false, false, false, false, false, false));
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #8dbf67, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #8dbf67, false, false, false, false, false, false, false, false);
+  cursor: pointer;
+}
+button.cupid-green:active {
+  border: 1px solid #5b992b;
+  border-bottom: 1px solid #538c27;
+  -webkit-box-shadow: compact(inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+}
+
+/* cupid blue (inspired by okcupid.com)
+*******************************************************************************/
+button.cupid-blue {
+  background-color: #d7e5f5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#d7e5f5, #cbe0f5, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #abbbcc;
+  border-left: 1px solid #a7b6c7;
+  border-bottom: 1px solid #a1afbf;
+  border-right: 1px solid #a7b6c7;
+  border-radius: 12px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 white, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 white, false, false, false, false, false, false, false, false);
+  color: #1a3e66;
+  font: normal 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 6px 0 7px 0;
+  text-align: center;
+  text-shadow: 0 1px 1px white;
+  width: 150px;
+}
+button.cupid-blue:hover {
+  background-color: #ccd9e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#ccd9e8, #c1d4e8, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #a1afbf;
+  border-left: 1px solid #9caaba;
+  border-bottom: 1px solid #96a3b3;
+  border-right: 1px solid #9caaba;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #f2f2f2, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #f2f2f2, false, false, false, false, false, false, false, false);
+  color: #163659;
+  cursor: pointer;
+}
+button.cupid-blue:active {
+  border: 1px solid #8c98a7;
+  -webkit-box-shadow: compact(inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee, false, false, false, false, false, false, false);
+}
+
+/* blue pill (inspired by iTunes)
+*******************************************************************************/
+button.blue-pill {
+  background-color: #a5b8da;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#a5b8da, #7089b3, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #758fba;
+  border-right: 1px solid #6c84ab;
+  border-bottom: 1px solid #5c6f91;
+  border-left: 1px solid #6c84ab;
+  border-radius: 18px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #aec3e5, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #aec3e5, false, false, false, false, false, false, false, false);
+  color: #fff;
+  font: bold 11px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px #64799e;
+  text-transform: uppercase;
+  width: 150px;
+}
+button.blue-pill:hover {
+  background-color: #9badcc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#9badcc, #687fa6, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #6d86ad;
+  border-right: 1px solid #647a9e;
+  border-bottom: 1px solid #546685;
+  border-left: 1px solid #647a9e;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #a5b9d9, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #a5b9d9, false, false, false, false, false, false, false, false);
+  cursor: pointer;
+}
+button.blue-pill:active {
+  border: 1px solid #546685;
+  -webkit-box-shadow: compact(inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eeeeee, false, false, false, false, false, false, false);
+}
+
+/* thoughtbot (inspired by thoughtbot.com)
+*******************************************************************************/
+button.thoughtbot {
+  background-color: #ee432e;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#ee432e 0%, #c63929 50%, #b51700 50%, #891100 100%, false, false, false, false, false, false));
+  border: 1px solid #951100;
+  border-radius: 5px;
+  -webkit-box-shadow: compact(inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), 0 1px 3px #333333, false, false, false, false, false, false, false);
+  color: #fff;
+  font: bold 20px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 12px 0 14px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.8);
+  width: 150px;
+}
+button.thoughtbot:hover {
+  background-color: #f37873;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%, false, false, false, false, false, false));
+  cursor: pointer;
+}
+button.thoughtbot:active {
+  background-color: #d43c28;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#d43c28 0%, #ad3224 50%, #9c1500 50%, #700d00 100%, false, false, false, false, false, false));
+  -webkit-box-shadow: compact(inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0px 0px 0px 1px rgba(255, 115, 100, 0.4), false, false, false, false, false, false, false, false);
+}
+
+/* purple candy
+*******************************************************************************/
+button.purple-candy {
+  background-color: #9e76e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#9e76e8 0%, #7038e0 50%, #6021de 50%, #6224de 100%, false, false, false, false, false, false));
+  border-radius: 3px;
+  color: #fff;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 10px 0 12px 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #473569;
+  width: 150px;
+  -webkit-background-clip: padding-box;
+}
+button.purple-candy:hover {
+  background-color: #8d69cf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#8d69cf 0%, #6332c7 50%, #551dc4 50%, #561fc4 100%, false, false, false, false, false, false));
+  -webkit-background-clip: padding-box;
+  cursor: pointer;
+}
+button.purple-candy:active {
+  background: #4a1aab;
+  background: -moz-radial-gradient(50% 31% 0deg, circle cover, rgba(38, 76, 153, 0.4), rgba(11, 23, 46, 0.4)), -moz-linear-gradient(top, #7b5cb5 0%, #572bad 50%, #4a1aab 50%, #4b1bab 100%);
+  background: -webkit-gradient(radial, 50% 20%, 75, 50% 50%, 0, from(rgba(38, 76, 153, 0.4)), to(rgba(11, 23, 46, 0.4))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(0.5, #572bad), color-stop(0.5, #4a1aab), color-stop(1, #4b1bab));
+  color: #ddd;
+  -webkit-background-clip: padding-box;
+}
+
+/* shiny blue (inspired by rdio iphone interface)
+*******************************************************************************/
+button.shiny-blue {
+  background-color: #759ae9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%, false, false, false, false, false, false));
+  border-top: 1px solid #1f58cc;
+  border-right: 1px solid #1b4db3;
+  border-bottom: 1px solid #174299;
+  border-left: 1px solid #1b4db3;
+  border-radius: 4px;
+  -webkit-box-shadow: compact(inset 0 0 2px 0 rgba(57, 140, 255, 0.8), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 2px 0 rgba(57, 140, 255, 0.8), false, false, false, false, false, false, false, false);
+  color: #fff;
+  font: bold 12px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0;
+  text-shadow: 0 -1px 1px #1a5ad9;
+  width: 150px;
+}
+button.shiny-blue:hover {
+  background-color: #5d89e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%, false, false, false, false, false, false));
+  cursor: pointer;
+}
+button.shiny-blue:active {
+  border-top: 1px solid #1b4db3;
+  border-right: 1px solid #174299;
+  border-bottom: 1px solid #133780;
+  border-left: 1px solid #174299;
+  -webkit-box-shadow: compact(inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee, false, false, false, false, false, false, false);
+}
+
+/* download itunes
+   I wrote a blog post about creating this button:
+   http://robots.thoughtbot.com/post/2718077289/make-css3-buttons-like-a-boss
+*******************************************************************************/
+button.download-itunes {
+  background-color: #52a8e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#52a8e8, #377ad0, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #4081af;
+  border-right: 1px solid #2e69a3;
+  border-bottom: 1px solid #20559a;
+  border-left: 1px solid #2e69a3;
+  border-radius: 16px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #72b9eb, 0 1px 2px 0 #b3b3b3, false, false, false, false, false, false, false);
+  color: #fff;
+  font: normal 11px/1 "lucida grande", sans-serif;
+  padding: 3px 5px;
+  text-align: center;
+  text-shadow: 0 -1px 1px #3275bc;
+  width: 112px;
+  -webkit-background-clip: padding-box;
+}
+button.download-itunes:hover {
+  background-color: #3e9ee5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#3e9ee5 0%, #206bcb 100%, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #2a73a6;
+  border-right: 1px solid #165899;
+  border-bottom: 1px solid #07428f;
+  border-left: 1px solid #165899;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #62b1e9, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #62b1e9, false, false, false, false, false, false, false, false);
+  cursor: pointer;
+  text-shadow: 0 -1px 1px #1d62ab;
+  -webkit-background-clip: padding-box;
+}
+button.download-itunes:active {
+  background: #3282d3;
+  border: 1px solid #154c8c;
+  border-bottom: 1px solid #0e408e;
+  -webkit-box-shadow: compact(inset 0 0 6px 3px #1657b5, 0 1px 0 0 white, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 6px 3px #1657b5, 0 1px 0 0 white, false, false, false, false, false, false, false);
+  text-shadow: 0 -1px 1px #2361a4;
+  -webkit-background-clip: padding-box;
+}
+
+button[disabled].download-itunes,
+button[disabled].download-itunes:hover,
+button[disabled].download-itunes:active {
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#dadada, #f3f3f3, false, false, false, false, false, false, false, false));
+  border-top: 1px solid #c5c5c5;
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 1px solid #cecece;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false);
+  color: #8f8f8f;
+  cursor: not-allowed;
+  text-shadow: 0 -1px 1px #ebebeb;
+}
+
+button.download-itunes::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* skip (inspired by okcupid iphone interface)
+*******************************************************************************/
+button.skip {
+  background-color: #8c9cbf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%, false, false, false, false, false, false));
+  border: 1px solid #172d6e;
+  border-bottom: 1px solid #0e1d45;
+  border-radius: 5px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #b1b9cb, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #b1b9cb, false, false, false, false, false, false, false, false);
+  color: #fff;
+  font: bold 16px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0 8px 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 -1px 1px #000f4d;
+  width: 150px;
+}
+button.skip:hover {
+  background-color: #7f8dad;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%, false, false, false, false, false, false));
+  cursor: pointer;
+}
+button.skip:active {
+  -webkit-box-shadow: compact(inset 0 0 20px 0 #1d2845, 0 1px 0 white, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 20px 0 #1d2845, 0 1px 0 white, false, false, false, false, false, false, false);
+}
+
+/* minimal indent (inspired by okcupid iphone interface)
+*******************************************************************************/
+div.indent {
+  background-color: #e2e2e2;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#e2e2e2, #fafafa, false, false, false, false, false, false, false, false));
+  border-bottom: 1px solid #e7e7e7;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-top: 1px solid #dfdfdf;
+  border-radius: 8px;
+  margin: 50px auto 0;
+  padding: 10px 0;
+  width: 170px;
+}
+
+button.minimal-indent {
+  background-color: #f3f3f3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#f3f3f3 0%, #dddddd 50%, #d2d2d2 50%, #dfdfdf 100%, false, false, false, false, false, false));
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #b4b4b4;
+  border-right: 1px solid #dfdfdf;
+  border-radius: 5px;
+  -webkit-box-shadow: compact(inset 0 1px 0 0 white, 0 1px 0 0 #d5d5d5, 0 -1px 2px 1px #efefef, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 white, 0 1px 0 0 #d5d5d5, 0 -1px 2px 1px #efefef, false, false, false, false, false, false);
+  color: #666;
+  font: bold 16px/1 "helvetica neue", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 7px 0;
+  text-shadow: 0 1px 1px white;
+  width: 150px;
+}
+button.minimal-indent:hover {
+  background-color: #e5e5e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false)));
+  background-image: -webkit-linear-gradient(top, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false));
+  background-image: -moz-linear-gradient(top, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false));
+  background-image: -ms-linear-gradient(top, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false));
+  background-image: -o-linear-gradient(top, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false));
+  background-image: linear-gradient(top, compact(#e5e5e5 0%, #d1d1d1 50%, #c4c4c4 50%, #b8b8b8 100%, false, false, false, false, false, false));
+  -webkit-box-shadow: compact(inset 0 1px 0 0 #f2f2f2, 0 1px 0 0 #c9c9c9, 0 -1px 2px 1px #e3e3e3, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 0 #f2f2f2, 0 1px 0 0 #c9c9c9, 0 -1px 2px 1px #e3e3e3, false, false, false, false, false, false);
+  cursor: pointer;
+}
+button.minimal-indent:active {
+  -webkit-box-shadow: compact(inset 0 0 30px 0 #999999, 0 1px 0 0 white, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0 30px 0 #999999, 0 1px 0 0 white, false, false, false, false, false, false, false);
+}
+
+/* webkit badge
+*******************************************************************************/
+button.webkit-badge {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #ee432e), color-stop(0.5, #c63929), color-stop(0.5, #b51700), color-stop(1, #891100));
+  color: #fff;
+  font: lighter italic 30px/1 "hoefler text", georgia, serif;
+  height: 88px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #3d0700;
+  width: 150px;
+  -webkit-mask-image: url("../images/badge.png");
+  -webkit-mask-position: left top;
+  -webkit-mask-repeat: no-repeat;
+}
+button.webkit-badge:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));
+  cursor: pointer;
+}
+button.webkit-badge:active {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #d43c28), color-stop(0.5, #ad3224), color-stop(0.5, #9c1500), color-stop(1, #700d00));
+}
+
+/* webkit seal
+*******************************************************************************/
+button.webkit-seal {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #9e76e8), color-stop(1, #6224de));
+  color: #fff;
+  height: 90px;
+  color: #fff;
+  font: bold 13px/1 "helvetica neue", helvetica, arial, sans-serif;
+  padding: 0;
+  text-align: center;
+  text-shadow: 0px -1px 1px #473569;
+  width: 150px;
+  -webkit-mask-image: url("../images/seal.png");
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+}
+button.webkit-seal:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #8d69cf), color-stop(1, #561fc4));
+  cursor: pointer;
+}
+button.webkit-seal:active {
+  background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 0, from(rgba(38, 76, 153, 0.2)), to(rgba(11, 23, 46, 0.2))), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #7b5cb5), color-stop(1, #4b1bab));
+}
+
+/* webkit check
+*******************************************************************************/
+button.webkit-check {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #779be9), color-stop(1, #2463de));
+  color: #fff;
+  height: 88px;
+  padding: 0;
+  text-align: center;
+  text-indent: -9999px;
+  text-shadow: 0px -1px 1px #3d0700;
+  width: 150px;
+  -webkit-mask-image: url("../images/check.png");
+  -webkit-mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+}
+button.webkit-check:hover {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #6989cf), color-stop(1, #1d55c4));
+  cursor: pointer;
+}
+button.webkit-check:active {
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #5c78b5), color-stop(1, #1b4bab));
+}
+
+/* disabled button styles
+   works with this markup: <button disabled="disabled">Submit</button>
+*******************************************************************************/
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active {
+  background: #999;
+  border: 0;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false);
+  color: #aaa;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+
+#play_game {
+  color: white;
+  background: #4162a8;
+  border-top: 1px solid #334d83;
+  border-right: 1px solid #334d83;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #334d83;
+  border-radius: 4px;
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  font-size: 1.125em;
+  text-align: center;
+  text-shadow: 0px -1px 1px black;
+  -webkit-background-clip: padding-box;
+}
+#play_game:hover {
+  -webkit-box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  cursor: pointer;
+}
+#play_game:active {
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  margin-top: 58px;
+}
+
+#tutorial_mtn {
+  color: white;
+  background: #7fbf4d;
+  border-top: 1px solid #66a039;
+  border-right: 1px solid #66a039;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #66a039;
+  border-radius: 4px;
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  font-size: 0.875em;
+  text-align: center;
+  text-shadow: 0px -1px 1px black;
+  -webkit-background-clip: padding-box;
+}
+#tutorial_mtn:hover {
+  -webkit-box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111, false, false, false, false, false);
+  cursor: pointer;
+}
+#tutorial_mtn:active {
+  -webkit-box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111, false, false, false, false, false);
+  margin-top: 58px;
+}

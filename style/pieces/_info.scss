@@ -1,17 +1,24 @@
+$orange: #F36E21;
 #info {
-	background-color: #fff;
-	color: #333;
+	background-color: #333;
+	color: #eee;
 	font-size: 0.75em;
-	padding: 0.625em 0 1em;
+	padding: 0.5em 0;
 	text-align: center;
-	margin-bottom: 2em;
-  -moz-box-shadow: inset 0 -4px 10px #eee;
-  -webkit-box-shadow: inset 0 -4px 10px #eee;
-  box-shadow: inset 0 -4px 10px #eee;
+	@include mq(netbook) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;		
+	}
 	em {
 		padding-left: 1em;
-		&:after {
-			content: " \2192";
-		}
+		&:after {content: " \2192"; }
+	}
+	a {
+		color: $orange;
+		@include transition (color, 3.0s, ease-in-out);
+		&:hover {color: darken($orange, 10%); }
 	}
 }

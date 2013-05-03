@@ -24,10 +24,15 @@ blockquote {
 h2 {
 	font-size: 3em;
 	line-height: 1.1;
+	margin-top: 0;
 }
-button {
-	padding: 1em;
+h3 {
+	font-size: 1.5em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
 }
-article {
-	@extend .cf;
-}
+button {padding: 1em; }
+article {@extend .cf; }
+dl {max-width: 35em; }
+dt {font-weight: bold; }
+dd {margin: 0 0 1em; }
