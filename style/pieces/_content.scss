@@ -1,51 +1,35 @@
 .content {
-	.wrapper {
-		background-color: rgba(255,255,255,0.85);
-		padding: 1em;
-		@include mq(tablet) {
-			padding: 2em;
-		}
-	}
-	section {
-		margin-bottom: 2em;
-	}
-	article {
-		h2 {
-			display: inline-block;
-			margin-top: 0.5em;
-		}
-		li {
-			margin-bottom: 1em;
-		}
-	}
+	background-color: rgba(255,255,255,0.85);
+	padding: 1em;
+	@include mq(tablet) {padding: 2em; }
+	// section {margin-bottom: 2em; }
 }
-h3 {
-	font-size: 1.5em;
-	margin-bottom: 0.5em;
+.buffer {
+	padding-top: 2em;
+	@include mq(netbook) {padding-top: 6em; }
+	@include mq(desktop) {padding-top: 8em; }
 }
-p + h3 {
-	margin-top: 1.5em;
-}
-.screenshots li {
-	margin-right: 1em;
-}
-.faq li {
-	text-align: center;
-}
-.thumbnails li {
-	margin-right: 1em;
-}
-.get_involved {
+
+.screenshots li {margin-right: 1em; }
+.faq li {text-align: center; }
+.thumbnails li {margin-right: 1em; }
+#get_involved {
 	li {
-		width: 24%;
-		padding: 1em;
-		vertical-align: top;
-		border-right: 1px solid #aaa;
-		&:first-child {padding-left: 0;}
-		&:last-child {
-			padding-right: 0;
-			border: none;
+		@include mq(desktop) {
+			width: 24%;
+			&:first-child {padding-left: 0;border: none;}
 		}
+		padding: 1em;
+		margin-bottom: 2em;
+		vertical-align: top;
+		border-left: 1px solid #aaa;
+		&:last-child {padding-right: 0;}
+	}
+	a {
+		font-size: 0.75em;
+		// text-decoration: none;
+		// color: inherit;
+		// border-bottom: 1px dotted;
 	}
 }
 .for_the_kids {
@@ -54,38 +38,36 @@ p + h3 {
 	padding: 1em;
 	border-radius: 6px;
 	border: 1px dotted #aaa;
-	span {
-		display: inline-block;
-		// margin-right: 2em;
-		vertical-align: top;
-		// width: 40%;
-		&:first-child {width: 60%;padding-right:1em;}
-		&:last-child {width: 35%;}
+	h3 {margin-top: 0; }
+	div {
+		text-align: center;
+		p {text-align: left; }
 	}
+	div:first-child {margin-bottom: 2em; }
 }
 .form {
 	list-style-type: none;
+	p {
+		margin-bottom: 0;
+	}
 	li {
 		margin-bottom: 0.875em;
-		ul {}
-		li {margin-bottom: 0;}
+		vertical-align: top;
+		&:first-child {
+			margin-right: 3em;
+		}
 	}
 	input {
-		min-width: 10em;
-		max-width: 15em;
+		min-width: 20em;
+		max-width: 35em;
+		height: 2.5em;
+		border-radius: 6px;
 	}
-	li:last-child {
-		vertical-align: top;
+	textarea {
+		border-radius: 6px;		
 	}
-}
-// added on Friday (apr, 26)
-dl {
-	max-width: 35em;
-}
-dt {
-	font-weight: bold;
-	margin-bottom: 1em;
-}
-dd {
-	margin-bottom: 3em;
+	button {
+		border-radius: 6px;
+
+	}
 }

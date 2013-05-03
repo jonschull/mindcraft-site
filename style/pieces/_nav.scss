@@ -1,17 +1,22 @@
-.nav li {
+.nav {
+	list-style: none;
 	text-transform: uppercase;
-	&:last-child {
-		margin-right: 0;
+	font-size: 0.75em;
+	li {
+		margin-bottom: 1em;
+		@include transition (border-bottom, 3.0s, ease-out);
+		&:last-child {margin-right: 0; }
+		a {
+			color: inherit;
+			padding: 0.6875em 0.6875em 0.25em;
+			text-decoration: none;
+			letter-spacing: 0.1em;
+			display: inline-block;
+			width: 100%;
+		}
+		@include mq(netbook) {display: inline-block; }
+		@include mq(desktop) {margin-right:2em;}
 	}
-	a {
-		color: #222;
-		font-size: 0.875em;
-		padding: 0.6875em;
-		text-decoration: none;
-		letter-spacing: 0.1em;
-		&:hover {background-color: #fff;}
-	}
+	a:hover {@extend .here;}
 }
-.here {
-	background-color: #0b0;
-}
+.here {border-bottom: 0.25em solid #333; }

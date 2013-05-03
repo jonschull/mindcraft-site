@@ -4,9 +4,7 @@
 	max-width: 1024px;
 	margin: 0 auto;
 	width: 90%;
-	@include mq(tablet) {
-		width: 80%;
-	}
+	@include mq(tablet) {width: 80%; }
 }
 .cf:before,
 .cf:after {
@@ -16,8 +14,9 @@
 .cf:after {
   clear: both;
 }
-.inline, .inline li {
+.inline li {
 	display: inline-block;
+	li {display: block; }
 }
 .assistive-text {
 	// wordpress theme twnetyeleven styles used as base
@@ -43,6 +42,7 @@
 // new
 .with_sidebar {
 	@extend .cf;
+	margin-bottom: 0;
 	@include mq(desktop) {
 		article {
 			padding-right: 4em;
