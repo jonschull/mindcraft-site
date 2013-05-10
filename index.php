@@ -46,7 +46,7 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["msg"])){
         <section class="with_sidebar">
           <article>
             <p>The goal of Learning Landscape is to create and develop an interactive multiplayer learning environment that will not only educate our users, but will also satisfy their entertainment needs.</p>
-            <p>We've turned Khan Academy's knowledge map into a 3D landscape that users can explore and enjoy.</p>
+            <p>We've turned Khan Academy's knowledge map into a 3D landscape that users can explore and enjoy!</p>
             <p>To learn more about Learning Landscape, how it came into existence, and who made it happen just <a href="#about">click here</a>.</p>
             <blockquote>
               "Education is not preparation for life;<br>education is life itself"<br><small>- John Dewey</small>
