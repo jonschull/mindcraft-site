@@ -2,7 +2,6 @@
 	background-color: rgba(255,255,255,0.85);
 	padding: 1em;
 	@include mq(tablet) {padding: 2em; }
-	// section {margin-bottom: 2em; }
 }
 .buffer {
 	padding-top: 2em;
@@ -16,8 +15,9 @@
 #get_involved {
 	li {
 		@include mq(desktop) {
-			width: 24%;
+			width: 32%;
 			&:first-child {padding-left: 0;border: none;}
+			margin-bottom: 0;
 		}
 		padding: 1em;
 		margin-bottom: 2em;
@@ -25,17 +25,12 @@
 		border-left: 1px solid #aaa;
 		&:last-child {padding-right: 0;}
 	}
-	a {
-		font-size: 0.75em;
-		// text-decoration: none;
-		// color: inherit;
-		// border-bottom: 1px dotted;
-	}
+	a {font-size: 0.75em; }
 }
 .for_the_kids {
 	background-color: rgba(175,175,175, 0.5);
 	max-width: 30em;
-	padding: 1em;
+	padding: 1em 1em 2em;
 	border-radius: 6px;
 	border: 1px dotted #aaa;
 	h3 {margin-top: 0; }
@@ -44,12 +39,14 @@
 		p {text-align: left; }
 	}
 	div:first-child {margin-bottom: 2em; }
+	a {
+		padding:0.875em;
+		text-decoration: none;
+	}
 }
 .form {
 	list-style-type: none;
-	p {
-		margin-bottom: 0;
-	}
+	p {margin-bottom: 0; }
 	li {
 		margin-bottom: 0.875em;
 		vertical-align: top;
@@ -63,11 +60,6 @@
 		height: 2.5em;
 		border-radius: 6px;
 	}
-	textarea {
-		border-radius: 6px;		
-	}
-	button {
-		border-radius: 6px;
-
-	}
+	textarea {border-radius: 6px; }
+	button {border-radius: 6px; }
 }

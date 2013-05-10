@@ -15,49 +15,100 @@
      <div class="wrapper">
       <div class="branding">
         <h1 title="Learning Landscape"><a href="#">Learning Landscape</a></h1>
-        <span>Better education through interactive technology</span>
+        <p>Better education through interactive technology</p>
       </div>      
       <nav>
-        <ul class="inline nav">
-          <li><a href="../">Home</a></li>
+        <ul class="nav">
+          <li><a href="../">Back</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="main" class="content with_sidebar">
-    <div class="wrapper">
+  <section id="main">
+    <div class="content wrapper buffer">
       <h2>Resources</h2>
       <article>
-        <p>Find out how to get Learning Landscape into your class to try it out</p>
+        <p>Explore Learning Landscape</p>
+        <p>We are thrilled you are interested in our knowledge mapping project. What would you like to explore next?</p>
 
-        <!-- students -->
-        <h3 id="students">Students<a href="#main">Back to top</a></h3>
-        
-        <ul>
-          <li>Resources for students to figure out how to play</li>
-          <li><a href="#">Tutorial Mountain</a></li>
-        </ul>
+        <!-- students/parents -->
+        <section id="students" class="buffer">
+          <h3>Students/Parents<a href="#main">Back to top</a></h3>
+          <dl>
+            <dt>What is MineCraft?</dt>
+            <dd>
+              <p><strong>Minecraft</strong> is a game about breaking and placing blocks. At first, people built structures to protect against nocturnal monsters, but as the game grew players worked together to create wonderful, imaginative things.</p>     
+              <p>It can also be about adventuring with friends or watching the sun rise over a blocky ocean. It’s pretty. Brave players battle terrible things in The Nether, which is more scary than pretty. You can also visit a land of mushrooms if it sounds more like your cup of tea. </p>
+              <p><a href="https://minecraft.net">Minecraft.net</a></p>   
+              <iframe width="560" height="315" src="http://www.youtube.com/embed/MmB9b5njVbA?rel=0" frameborder="0" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="http://www.youtube.com/embed/MmB9b5njVbA?rel=0" frameborder="0" allowfullscreen></iframe>
+            </dd>
+            <!-- what is khan acadamy? -->
+            <dt>What is Khan Academy?</dt>
+            <dd>
+              <blockquote>
+                <p>"With a library of over 4,100 videos on everything from arithmetic to physics, finance, and history and hundreds of skills to practice, we're on a mission to help you learn what you want, when you want, at your own pace.</p>   
+                <p>"We are a donor-supported not-for-profit and would not be possible without the generous support of users everywhere."</p>
+              </blockquote>
+              <p><a href="https://www.khanacademy.org">KhanAcademy.org</a></p>
+            </dd>
+          </dl>
+        </section>
 
-        <!-- partners -->
-        <h3 id="partners">Partners<a href="#main">Back to top</a></h3>
-        <p>Learn how to submit your own courses and quizzes into the Learning Landscape world</p>
-        
-        <p>We believe it would be extremely benefcial to understand what is going on under the hood to make Learning Landscape possible</p>
-        <blockquote><em><a href="#">Click here</a> to find out how we turn your own submissions into a landscape world filled with characters loaded up with your questions</em></blockquote>
+
+
+
+       <iframe width="560" height="315" src="http://www.youtube.com/embed/a6kwIBI3j98?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+        <!-- developers -->
+        <section id="developers" class="buffer">
+          <h3>Developers<a href="#main">Back to top</a></h3>
+          <p>Before getting into the nitty griddy of developer jargon, let's just cover what you need to know. First of all, we are using minecraft, a game developed by <strong>Mojang</strong>. It's an open world that is extremely easy to modify and create with. Our modding is supported by <strong>bukkit</strong>, a wrapper for the minecraft server. It allows us to add our mods, which are <strong>Denizens</strong>, <strong>World Edit</strong>, and <strong>World Guard</strong>.</p>
+          <p><strong>Denizens</strong> is a mod that allows moderators of the server to add NPCs and scripts to the world. This mod is used to make sentries and quizzers, the actual educational parts of learning landscape. </p>
+          <p><strong>World Edit</strong> is a mod that allows developers to edit the world using in game code lines typed into chat. You can learn more about <strong>World Edit</strong> below.</p>
+          <p><strong>World guard</strong> is a mod that can set areas and permissions. These permissions include block permissions, destruction permissions, and other permissions in the area.</p>
+          <p>Learning landscape combines many component technologies.</p> 
+          <dl>
+          <!-- bukkit -->
+            <dt>How does Bukkit work?</dt>
+            <dd>
+              <p><a href="http://www.minecraftwiki.net/wiki/Bukkit">How does Bukkit work?</a></p>
+              <p><a href="http://dl.bukkit.org/downloads/craftbukkit/">download <strong>bukkit</strong></a></p>           
+            </dd>
+          <!-- citizens/denizens -->
+            <dt>How do Citizens/Denizens work?</dt>
+            <dd>
+              <p><a href="http://dev.bukkit.org/server-mods/citizens/">How does Citizens work?</a></p>
+              <p><a href="http://ci.citizensnpcs.com/job/Citizens2/">download Citizens</a></p>
+              <ul>
+                <li><a href="DenizenHandbook.html">DenizenHandbook</a></li>
+                <li><a href="DenizensBeginnerGuide.html">DenizensBeginnerGuide</a></li>
+                <li><a href="NPCCreationGuide.html">NPCCreationGuide</a></li>
+              </ul>            
+              <p><a href="http://ci.citizensnpcs.com/job/Denizen/">download Denizens</a></p>
+            </dd>
+          <!-- worldedit -->
+            <dt>How does WorldEdit work?</dt>
+            <dd>
+              <p><a href="http://www.minecraftwiki.net/wiki/Mods/WorldEdit">How does WorldEdit work?</a></p>     
+              <p><a href="http://dev.bukkit.org/server-mods/worldedit/files/31-world-edit-5-5-2/">download WorldEdit</a></p>       
+            </dd>
+          </dl>          
+        </section>
+
+        <!-- teachers -->
+        <section id="teachers" class="buffer">
+        <h3>Teachers<a href="#main">Back to top</a></h3>    
+        <p> Learning Landscape is a server in <a href="https://minecraft.net">MineCraft</a> dedicated to educational gameplay. There are locational nodes that each indicate a particular subject or topic. Each of these nodes has sentries, or non-playable characters (NPCs) that are capable of asking questions.</p>
+        <p>Although there are limited nodes, we have created tutorials so that teachers from all over the world may add their own material and questions. It is our hope that Learning Landscape will become a visual, playable and engaging knowledge map.</p>
         <dl>
-          <!-- dezians -->
-          <dt>How does Dezians work?</dt>
-          <dd>
-            <ul>
-              <li><a href="DenizenHandbook.html">DenizenHandbook</a></li>
-              <li><a href="DenizensBeginnerGuide.html">DenizensBeginnerGuide</a></li>
-              <li><a href="NPCCreationGuide.html">NPCCreationGuide</a></li>
-            </ul>            
-          </dd>
-          <dt>How do I submit new courses?</dt>
+          <dt>How do I submit new material?</dt>
           <!-- Terrain Text file format -->
           <dd>
+            <p>This is an example of what the final file will look like:</p>
+            <script src="https://gist.github.com/aztec8/5514466.js"></script>        
             <p>How to format a text file so it can be read by the Terrain Generator:</p>
             <ol>
               <li>Step 1: Find the subject you want to map on Khan Academy.</li>
@@ -86,134 +137,34 @@
             <blockquote>*Be certain to include all colons, spaces, quotes, and other symbols as seen in the examples below*</blockquote>
             <p>Create a 5-line node for each subject and save it as a text file to have the Terrain Generator read it!</p>
             <!-- examples -->
-            <h4>EXAMPLES:</h4>
-            <ul>
-              <li>
-                <code>
-                  DisplayName: "2-digit addition"<br>
-                  FileName: "addition_2"<br>
-                  URL: "https://www.khanacademy.org/math/e/addition_2"<br>
-                  PreReqs: ["number_line", "addition_1", "representing_numbers"]<br>
-                  (vPos,hPos): (4,1)
-                </code>
-              </li>
-              <li>
-                <code>
-                  DisplayName: "Representing numbers"<br>
-                  FileName: "representing_numbers"<br>
-                  URL: "https://www.khanacademy.org/math/e/representing_numbers"<br>
-                  PreReqs: [N/A]<br>
-                  (vPos,hPos): (3,0)                
-                </code>
-              </li>
-            </ul>
+            <h4>EXAMPLE:</h4>
+              <code>
+                DisplayName: "Representing numbers"<br>
+                FileName: "representing_numbers"<br>
+                URL: "https://www.khanacademy.org/math/e/representing_numbers"<br>
+                PreReqs: [N/A]<br>
+                (vPos,hPos): (3,0)                
+              </code>
           </dd>              
-        </dl>
-
-        <!-- developers -->
-        <h3 id="developers">Developers<a href="#main">Back to top</a></h3>
-        
-        <dl>
-          <dt>How do I submit new courses?</dt>
-          <dd>
-            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- dezians -->
-          <dt>How does Dezians work?</dt>
-          <dd>
-            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- sentries -->
-          <dt>How do I get Sentries to work?</dt>
-          <dd>
-            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-        </dl>
-
-        <!-- teachers -->
-        <h3 id="teachers">Teachers<a href="#main">Back to top</a></h3>
-        
-        <dl>
-          <dt>How do I submit new courses?</dt>
-          <dd>
-            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- dezians -->
-          <dt>How does Dezians work?</dt>
-          <dd>
-            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- sentries -->
-          <dt>How do I get Sentries to work?</dt>
-          <dd>
-            <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-        </dl>
-
-        <!-- administrators -->
-        <h3 id="adminisrators">Administrators<a href="#main">Back to top</a></h3>
-        
-        <dl>
-          <dt>How do I submit new courses?</dt>
-          <dd>
-            <p>With magic and some lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, facere modi consectetur a fugiat ducimus laudantium dignissimos voluptatibus incidunt non!</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- dezians -->
-          <dt>How does Dezians work?</dt>
-          <dd>
-            <p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
-            <p>Read through the whole walk-through <a href="#">here</a>.</p>
-          </dd>
-          <!-- sentries -->
-          <dt>How do I get Sentries to work?</dt>
-          <dd>
-            <!-- <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.</p> -->
-            <!-- <p>Read through the whole walk-through <a href="#">here</a>.</p> -->
-          <!-- </dd> -->
-        </dl>
+        </dl>          
+        </section>
       </article>
       <!-- sidebar -->
       <aside>
         <h4>Table of Contents</h4>
         <ul>
-          <li><a href="#students">Students</a></li>
-          <li><a href="#partners">Partners</a></li>
+          <li><a href="#students">Students/Parents</a></li>
           <li><a href="#developers">Developers</a></li>
           <li><a href="#teachers">Teachers</a></li>
-          <li><a href="#administrators">Administrators</a></li>
         </ul>
         <ul>
-          <li>[links to forums]</li>
-          <li>teaching with Learning Landscape <br>mini-lessons - youtube videos topics:</li>
-          <li>HOW TO PLAY MINECRAFT</li>
-          <li>basic info WITH videos</li>
-          <li>MORE LINKS TO OTHER COMMUNITIES</li>
-          <li>link to design doc</li>
+          <li>First time playing? Check out (DOWNLOAD MINECRAFT) <a href="#">Tutorial Mountain</a></li>
+          <li>Download MineCraft
+          <li>I've played MineCraft before <a href="#">Server Information</a></li>
         </ul>
-        <h4>Useful links</h4>
       </aside>      
     </div>
   </section>
-
-  <footer>
-    <div class="wrapper">
-      <nav class="footer_nav">
-        <ul class="inline">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
 </div>
 </body>
 </html>
