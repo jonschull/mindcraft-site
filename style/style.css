@@ -92,7 +92,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font: 100% "Helvetica Neue", Verdana, Arial, sans-serif;
   line-height: 1.4;
-  color: #333;
+  color: #000;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -487,7 +487,7 @@ footer {
 }
 
 .for_the_kids {
-  background-color: rgba(175, 175, 175, 0.5);
+  background-color: rgba(0, 175, 175, 0.5);
   max-width: 30em;
   padding: 1em 1em 2em;
   border-radius: 6px;
@@ -497,7 +497,7 @@ footer {
   margin-top: 0;
 }
 .for_the_kids div {
-  text-align: center;
+  text-align: right;
 }
 .for_the_kids div p {
   text-align: left;
